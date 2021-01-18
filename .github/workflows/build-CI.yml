@@ -1,8 +1,13 @@
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: '0 22 * * 5'
+#  schedule:
+#    - cron: '0 22 * * 5'
+  release:
+    types: [published]
+  push:
+    branches: 
+      - master
   workflow_dispatch:
     
 env:
